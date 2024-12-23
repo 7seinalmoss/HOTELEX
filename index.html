@@ -6,16 +6,6 @@
     <title>HOTEL EX</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-
-        @media (max-width: 768px) {
-  /* Styles for screens smaller than 768px */
-  nav {
-    display: none;
-  }
-  .hamburger-menu {
-    display: block;
-  }
-}
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
@@ -25,7 +15,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
             position: sticky;
@@ -114,7 +104,7 @@
             animation: fadeIn 2s ease-in;
         }
         .service-section img {
-            max-width: 300px;
+            max-width: 100%;
             border-radius: 8px;
         }
         .service-section:nth-child(even) {
@@ -148,6 +138,7 @@
         .contact {
             animation-delay: 1.5s;
         }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -184,6 +175,48 @@
             to {
                 transform: translateY(0);
                 opacity: 1;
+            }
+        }
+
+        /* Media Query for small screens */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            .feature, .service-section {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+            .service-section {
+                flex-direction: column;
+            }
+            footer {
+                font-size: 0.9em;
+            }
+        }
+        /* Media Query for very small screens (phones) */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .btn {
+                font-size: 0.9em;
+                padding: 12px 25px;
+            }
+            .service-section img {
+                max-width: 100%;
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -238,51 +271,51 @@
     </div>
 </section>
 
+<section id="luxury" class="services">
+    <h2>Luxury & Comfort</h2>
+    <div class="service-section">
+        <img src="https://via.placeholder.com/300" alt="Luxury Interior">
+        <div>
+            <h3>Timeless Elegance</h3>
+            <p>Our rooms and suites are designed with a harmonious blend of modern sophistication and timeless charm, ensuring a comfortable and stylish stay for our guests.</p>
+        </div>
+    </div>
 
-    
-        <section id="luxury" class="services">
-            <h2>Luxury & Comfort</h2>
-            <div class="service-section">
-              <img src="https://via.placeholder.com/300" alt="Luxury Interior">
-              <div>
-                <h3>Timeless Elegance</h3>
-                <p>Our rooms and suites are designed with a harmonious blend of modern sophistication and timeless charm, ensuring a comfortable and stylish stay for our guests.</p>
-              </div>
-            </div>
-          
-            <div class="service-section">
-              <img src="https://via.placeholder.com/300" alt="Relaxation Space">
-              <h3>Unwind and Relax</h3>
-              <p>Indulge in ultimate relaxation in our spacious and luxurious rooms. All our rooms are equipped with plush bedding, premium amenities, and stunning views of the city or the tranquil courtyard.</p>
-            </div>
-          
-        
-            <div class="service-section">
-              <img src="https://via.placeholder.com/300" alt="Spa Services">
-              <h3>Spa Services</h3>
-              <p>Treat yourself to a rejuvenating experience at our world-class spa. We offer a variety of massages, facials, and body treatments to help you unwind and de-stress.</p>
-            </div>
-          </section>
-          
-          <section id="amenities" class="services">
-            <h2>Unmatched Amenities</h2>
-            <div class="service-section">
-              <img src="https://via.placeholder.com/300" alt="Swimming Pool">
-              <div>
-                <h3>Sparkling Pool</h3>
-                <p>Take a refreshing dip in our outdoor swimming pool, surrounded by comfortable loungers and lush greenery. Perfect for soaking up the sun or enjoying a relaxing swim.</p>
-              </div>
-            </div>
-          
-            <div class="service-section">
-              <img src="https://via.placeholder.com/300" alt="Fitness Center">
-              <h3>Fitness Center</h3>
-              <p>Stay active during your stay at our state-of-the-art fitness center. We offer a wide range of equipment to suit all fitness levels, from cardio machines to free weights.</p>
-            </div>
-          
-            <div class="service-section">
-              <img src="https://via.placeholder.com/300" alt="Business Center">
-              <h3>Business Center</h3>
-              <p>Stay connected and productive at our fully equipped business center. We offer complimentary Wi-Fi, printing services, and workstations for your convenience.</p>
-            </div>
-          </section>
+    <div class="service-section">
+        <img src="https://via.placeholder.com/300" alt="Relaxation Space">
+        <h3>Unwind and Relax</h3>
+        <p>Indulge in ultimate relaxation in our spacious and luxurious rooms. All our rooms are equipped with plush bedding, premium amenities, and stunning views of the city or the tranquil courtyard.</p>
+    </div>
+
+    <div class="service-section">
+        <img src="https://via.placeholder.com/300" alt="Spa Services">
+        <h3>Spa Services</h3>
+        <p>Treat yourself to a rejuvenating experience at our world-class spa. We offer a variety of massages, facials, and body treatments to help you unwind and de-stress.</p>
+    </div>
+</section>
+
+<section id="amenities" class="services">
+    <h2>Unmatched Amenities</h2>
+    <div class="service-section">
+        <img src="https://via.placeholder.com/300" alt="Swimming Pool">
+        <div>
+            <h3>Sparkling Pool</h3>
+            <p>Take a refreshing dip in our outdoor swimming pool, surrounded by comfortable loungers and lush greenery. Perfect for soaking up the sun or enjoying a relaxing swim.</p>
+        </div>
+    </div>
+
+    <div class="service-section">
+        <img src="https://via.placeholder.com/300" alt="Fitness Center">
+        <h3>Fitness Center</h3>
+        <p>Stay active during your stay at our state-of-the-art fitness center. We offer a wide range of equipment to suit all fitness levels, from cardio machines to free weights.</p>
+    </div>
+
+    <div class="service-section">
+        <img src="https://via.placeholder.com/300" alt="Business Center">
+        <h3>Business Center</h3>
+        <p>Stay connected and productive at our fully equipped business center. We offer complimentary Wi-Fi, printing services, and workstations for your convenience.</p>
+    </div>
+</section>
+
+</body>
+</html>
